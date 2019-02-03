@@ -10,7 +10,9 @@ Tested on WordPress with the editors: TinyMCE and TinyMCE Advanced.
 Tested on Joomla with the editors: TinyMCE and JCE.
 
 
-This is not an official plugin/module of RocketTheme.
+This is not an official plugin of RocketTheme.
 
 
-https://marcosrego.com/en/web-en/editor4roks-en/
+editor4roks: https://marcosrego.com/en/web-en/editor4roks-en/
+
+RocketTheme: https://rockettheme.com/

@@ -11,3 +11,6 @@ Tested on Joomla with the editors: TinyMCE and JCE.
 
 
 This is not an official plugin/module of RocketTheme.
+
+
+https://marcosrego.com/en/web-en/editor4roks-en/

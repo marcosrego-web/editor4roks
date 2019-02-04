@@ -1,8 +1,8 @@
 # editor4roks
+### Description
 Plugin that adds the WYSIWYG HTML Editor to the custom descriptions of Roksprocket Modules/Widgets.
 
 With editor4roks the descriptions will be easier to edit and the links easier to put directly on the modules/widgets.
-
 
 
 Tested on WordPress with the editors: TinyMCE and TinyMCE Advanced.
@@ -10,9 +10,16 @@ Tested on WordPress with the editors: TinyMCE and TinyMCE Advanced.
 Tested on Joomla with the editors: TinyMCE and JCE.
 
 
-This is not an official plugin of RocketTheme.
+This is not an official plugin of **[RocketTheme](https://rockettheme.com/)**.
 
+**[editor4roks page](https://marcosrego.com/en/web-en/editor4roks-en/)**
 
-editor4roks: https://marcosrego.com/en/web-en/editor4roks-en/
+### Changelog
 
-RocketTheme: https://rockettheme.com/
+**2.0.1** - The css and javascripts were changed to avoid cached files when updating from version 1.1.1.
+
+**2.0.0** - editor4roks now uses the default visual editor. Tested on WordPress with the editors TinyMCE and TinyMCE Advanced. Tested on Joomla with the editors: TinyMCE and JCE (*It does not work with CodeMirror*).
+
+**1.1.1** - Fixed a bug where the icons of the editor would not appear on websites not located in the root/public_html folder (Wordpress).
+
+**1.1.0** - First public release (Based on the editor NicEdit with options adapted for Wordpress and Joomla).

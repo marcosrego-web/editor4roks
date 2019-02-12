@@ -1,163 +1,46 @@
 <?xml version="1.0" encoding="utf-8"?>
-
-
-
 <extension type="plugin" group="system" version="3.5" method="upgrade">
-
-
-
     <name>editor4roks</name>
-
-
-
-    <version>2.0.1</version>
-
-
-
-    <creationDate>4 February 2019</creationDate>
-
-
-
+    <version>2.1.0</version>
+    <creationDate>12 February 2019</creationDate>
     <author>Marcos Rego</author>
-
-
-
     <authorEmail>web@marcosrego.com</authorEmail>
-
-
-
     <authorUrl>https://marcosrego.com</authorUrl>
-
-
-
 	<license>http://www.gnu.org/licenseses/gpl-2.0.html GNU/GPL</license>
-
-
-
     <description><![CDATA[
-
-
-
-	<span class="readonly"><h1>editor4roks</h1>
-
-
-
-		<p class="alert alert-info">Plugin that adds the WYSIWYG HTML Editor to the custom descriptions of your Roksprocket Modules. With editor4roks activated the descriptions will be easier to edit and the links easier to put directly on the modules.</p>
-
-
-
- 		<p class="margintop">
-
-		
-
+	<span class="readonly">
+		<p class="alert alert-info">Plugin that adds the WYSIWYG HTML Editor to the custom descriptions of your Roksprocket Modules. With <strong>editor4roks</strong> activated the descriptions will be easier to edit and the links easier to put directly on the modules.</p>
+ 		<p>
 		<a href="https://marcosrego.com/en/web-en/editor4roks-en/" target="_blank" class="btn btn-info">editor4roks</a>
-
-
-
 		<a href="http://www.rockettheme.com/joomla/extensions/roksprocket" target="_blank" class="btn btn-info">Roksprocket on RocketTheme website</a>
-
-
-
+		<a href="http://nicedit.com/" target="_blank" class="btn btn-info">NicEdit editor website</a>
 		</p>
-
-
-
-		<p class="license">This is not an official plugin of RocketTheme.<br>editor4roks is released under the <a target="_blank" href="http://www.gnu.org/licenses/gpl-2.0.html">GNU/GPL v2 license.</a></p>
-
-
-
+		<p><small>This is not an official plugin of RocketTheme.<br>editor4roks is released under the <a target="_blank" href="http://www.gnu.org/licenses/gpl-2.0.html">GNU/GPL v2 license.</a></small></p>
 	</span>
-
-
-
-<style type="text/css">
-
-
-
-		    span.readonly h1 { clear:both; font-family: Arial; font-size:26px; margin: 0 26px 10px; color:#333; font-weight: normal; border-bottom: 1px solid #eee; }
-
-
-
-		    span.readonly h2 { clear:both; font-family: Georgia, sans-serif; font-size:20px; margin: 30px 26px 10px; color:#333; font-weight: normal; }
-
-
-
-			span.readonly { padding: 10px; font-family: Arial; font-size:13px !important; font-weight: normal !important; text-align: justify; color: #4d4d4d; line-height: 24px; }
-
-
-
-			span.readonly p { margin: 0 26px 10px }
-
-
-
-			span.readonly p.margintop { margin-top: 30px }
-
-
-
-			span.readonly p.license { border-top: 1px solid #eee; font-size: 11px; margin: 30px 26px 0; padding: 6px 0; }
-
-
-
-			.alert-danger a { color: #843534 } .alert .alert-link { font-weight: 700 }
-
-
-
-}
-
-
-
-</style>
-
-
-
 		]]></description>
-
 	<!-- Core files admin -->
-
-
-
 	<files>
-
-
-
 		<filename plugin="editor4roks">editor4roks.php</filename>
-
-
-
-		<filename>editor4roks_v201.js</filename>
-
-		
-
-		<filename>e4r-style_v201.css</filename>
-
-
-
+		<filename>assets/css/v210.css</filename>
+		<filename>assets/js/v210.js</filename>
+		<filename>assets/js/nicEdit.js</filename>
+		<filename>assets/img/nicEditorIcons.gif</filename>
 		<filename>index.html</filename>
-
-
-
 	</files>
-
 	 <administration > </administration>
-
-	 
-
 	 <updateservers>		
-
-
-
 	<server type="extension" priority="1" name="editor4roks"><![CDATA[
-
-
-
 	https://marcosrego.com/web/editor4roks/joomla-updates.xml
-
-
-
 	]]></server>	
-
-
-
 	</updateservers>
-
+	<config>
+        <fields name="params">
+            <fieldset name="options">
+				<field name="editoroption" type="list" default="1" label="Editor">
+					<option value="1">Default</option>
+                    <option value="0">NicEdit</option>
+                </field>
+			</fieldset>
+        </fields>
+    </config>
 </extension>

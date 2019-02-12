@@ -37,7 +37,7 @@
         <fields name="params">
             <fieldset name="options">
 				<field name="editoroption" type="list" default="1" label="Editor">
-					<option value="1">Default</option>
+					<option value="1">JDEFAULT</option>
                     <option value="0">NicEdit</option>
                 </field>
 			</fieldset>

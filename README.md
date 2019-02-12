@@ -13,10 +13,12 @@ This is not an official plugin of **[RocketTheme](https://rockettheme.com/)**.
 
 ### Changelog
 
+**2.1.0** - Joomla - Added an option on the plugin settings to use *NicEdit* instead of the default editor.
+
 **2.0.1** - The css and javascripts were changed to avoid cached files when updating from version 1.
 
 **2.0.0** - editor4roks now uses the default visual editor. Tested on *WordPress* with the editors *TinyMCE* and *TinyMCE Advanced* and tested on *Joomla* with the editors *TinyMCE* and *JCE* (It does not work with *CodeMirror*).
 
 **1.1.1** - Wordpress - Fixed a bug where the icons of the editor would not appear on websites not located in the root/public_html folder.
 
-**1.1.0** - First public release (Based on the editor NicEdit with options adapted for Wordpress and Joomla).
+**1.1.0** - First public release (Based on the editor *NicEdit* with options adapted for Wordpress and Joomla).

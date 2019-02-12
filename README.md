@@ -13,7 +13,7 @@ This is not an official plugin of **[RocketTheme](https://rockettheme.com/)**.
 
 ### Changelog
 
-**2.1.0** - Joomla - Added an option on the plugin settings to change between *NicEdit* and the default editor.
+**2.1.0** - Joomla - Added an option on the plugin settings to change between *NicEdit* or the default editor.
 
 **2.0.1** - The css and javascripts were changed to avoid cached files when updating from version 1.
 

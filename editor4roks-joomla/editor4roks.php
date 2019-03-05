@@ -17,7 +17,7 @@ if($app->isAdmin()) {
 			$url = $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI'];
 			$editor4roksContent  = '';
 			if (strpos($url,'com_roksprocket') !== false) {
-				$e4rVersion = 'v210';
+				$e4rVersion = 'v211';
 				$rootPath = JPATH_ROOT;
 				$rootUrl = JUri::root();
 				$pluginUrl = $rootUrl.'plugins/system/editor4roks/';
@@ -26,7 +26,7 @@ if($app->isAdmin()) {
 				if ( $editoroption != 0 || $editoroption == null) {
 					//Default Editor
 					$editor = JFactory::getEditor();
-					$editor = $editor->display('e4r_textarea', '', '550', '400', '60', '20', false);
+					$editor = $editor->display('e4r_textarea', '', '550', '400', '60', '20', true);
 				} else {
 					//NicEdit Editor
 					$filesFolder = "/images";
@@ -38,7 +38,7 @@ if($app->isAdmin()) {
 							$image = str_replace($rootPath."/","",$image);
 							$image = $rootUrl.$image;
 							$imagename = basename($image);
-							$editor4roksContent = $editor4roksContent.'<option value="'.$image.'">ðŸ–¼ Image - '.$imagename.'</option>';
+							$editor4roksContent = $editor4roksContent.'<option value="'.$image.'">🖼 Image - '.$imagename.'</option>';
 						}
 					}
 					$editor4roksContent = $editor4roksContent.'</datalist>';
@@ -54,18 +54,18 @@ if($app->isAdmin()) {
 				$editor4roksContent = $editor4roksContent.'<datalist id="menufilelist">';
 					foreach ($allMenuItems as $menuItem) {
 						if (substr($menuItem->link, 0, 4 ) === "http") {
-							$editor4roksContent = $editor4roksContent.'<option value="'.$menuItem->link.'">ðŸ”— Link - '.$menuItem->title.'</option>';
+							$editor4roksContent = $editor4roksContent.'<option value="'.$menuItem->link.'">🔗 Link - '.$menuItem->title.'</option>';
 						} else if (strpos($menuItem->link, 'Itemid=') !== false || strpos($menuItem->link, '#') !== false) {
-							$editor4roksContent = $editor4roksContent.'<option value="'.$menuItem->link.'">ðŸ“ <span style="text-transform: capitalize">'.$menuItem->menutype.'</span> - '.$menuItem->title.' (id: '.$menuItem->id.')</option>';
+							$editor4roksContent = $editor4roksContent.'<option value="'.$menuItem->link.'">📁 <span style="text-transform: capitalize">'.$menuItem->menutype.'</span> - '.$menuItem->title.' (id: '.$menuItem->id.')</option>';
 						} else if(substr($menuItem->link, -4) == '.pdf' || substr($menuItem->link, -4) == '.PDF') {
-							$editor4roksContent = $editor4roksContent.'<option value="'.$menuItem->link.'">ðŸ“ ðŸ“„ Menu to File - '.$menuItem->title.'</option>';
+							$editor4roksContent = $editor4roksContent.'<option value="'.$menuItem->link.'">📁 📄 Menu to File - '.$menuItem->title.'</option>';
 						} else {
-							$editor4roksContent = $editor4roksContent.'<option value="'.$menuItem->link.'&Itemid='.$menuItem->id.'">ðŸ“ <span style="text-transform: capitalize">'.$menuItem->menutype.'</span> - '.$menuItem->title.' (id: '.$menuItem->id.')</option>';
+							$editor4roksContent = $editor4roksContent.'<option value="'.$menuItem->link.'&Itemid='.$menuItem->id.'">📁 <span style="text-transform: capitalize">'.$menuItem->menutype.'</span> - '.$menuItem->title.' (id: '.$menuItem->id.')</option>';
 						}
 					}
 				$editor4roksContent = $editor4roksContent. '</datalist>';
-				$editor4roksContent = $editor4roksContent.'<div class="linkeditor4roks"><div class="e4r-container"><div class="e4r-content"><input id="e4r-linkarea" placeholder="Search here for a menu or insert the link..." list="menufilelist"></input><div class="e4r-btn-container"><a class="btn btn-primary btn-insert"><small>âœ” INSERT</small></a> <a class="btn btn-cancel"><small>âœ– CANCEL</small></a></div></div></div></div>';
-				$editor4roksContent = $editor4roksContent.'<div class="editor4roks"><div class="e4r-container"><div class="e4r-content"><div class="e4r-txt-container">'.$editor.'<div class="e4r-btn-container"><a class="btn btn-primary btn-insert"><small>âœ” INSERT</small></a> <a class="btn btn-cancel"><small>âœ– CANCEL</small></a></div></div></div></div>';
+				$editor4roksContent = $editor4roksContent.'<div class="linkeditor4roks"><div class="e4r-container"><div class="e4r-content"><input id="e4r-linkarea" placeholder="Search here for a menu or insert the link..." list="menufilelist"></input><div class="e4r-btn-container"><a class="btn btn-primary btn-insert"><small>✔ INSERT</small></a> <a class="btn btn-cancel"><small>✖ CANCEL</small></a></div></div></div></div>';
+				$editor4roksContent = $editor4roksContent.'<div class="editor4roks"><div class="e4r-container"><div class="e4r-content"><div class="e4r-txt-container">'.$editor.'<div class="e4r-btn-container"><a class="btn btn-primary btn-insert"><small>✔ INSERT</small></a> <a class="btn btn-cancel"><small>✖ CANCEL</small></a></div></div></div></div>';
 			}
 		}
 		public function onAfterRender() {

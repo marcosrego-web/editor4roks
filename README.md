@@ -13,6 +13,8 @@ This is not an official plugin of **[RocketTheme](https://rockettheme.com/)**.
 
 ### Changelog
 
+**2.1.1** - Joomla - Extra buttons on the default editor. Corrected a bug where the panels could open behind the default editor.
+
 **2.1.0** - Added the plugin settings page with option to change between NicEdit or the default editor.
 
 **2.0.1** - The css and javascripts were changed to avoid cached files when updating from version 1.

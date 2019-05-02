@@ -1,0 +1,22 @@
+<updates>
+<update>
+	<name>editor4roks</name>
+	<description></description>
+	<element>editor4roks</element>
+	<type>plugin</type>
+	<folder>system</folder>
+	<version>2.2.0</version>
+	<client>site</client>
+	<infourl title="editor4roks">https://marcosrego.com/en/web-en/editor4roks-en/</infourl>
+	<downloads>
+		<downloadurl type="full" format="zip">https://raw.githubusercontent.com/marcosrego-web/editor4roks/master/updates/editor4roks-joomla.zip</downloadurl>
+	</downloads>
+	<tags>
+		<tag>stable</tag>
+	</tags>
+	<maintainer>Marcos Rego</maintainer>
+	<maintainerurl>https://marcosrego.com</maintainerurl>
+	<section>Updates</section>
+	<targetplatform name="joomla" version=".*" />
+</update>
+</updates>

@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <extension type="plugin" group="system" version="3.5" method="upgrade">
     <name>editor4roks</name>
-    <version>2.1.1</version>
-    <creationDate>05 March 2019</creationDate>
+    <version>2.2.0</version>
+    <creationDate>02 May 2019</creationDate>
     <author>Marcos Rego</author>
     <authorEmail>web@marcosrego.com</authorEmail>
     <authorUrl>https://marcosrego.com</authorUrl>
@@ -21,8 +21,9 @@
 	<!-- Core files admin -->
 	<files>
 		<filename plugin="editor4roks">editor4roks.php</filename>
-		<filename>assets/css/v211.css</filename>
-		<filename>assets/js/v211.js</filename>
+		<filename>assets/css/v220.css</filename>
+		<filename>assets/css/roks4mob_v220.css</filename>
+		<filename>assets/js/v220.js</filename>
 		<filename>assets/js/nicEdit.js</filename>
 		<filename>assets/img/nicEditorIcons.gif</filename>
 		<filename>index.html</filename>
@@ -30,15 +31,19 @@
 	 <administration > </administration>
 	 <updateservers>		
 	<server type="extension" priority="1" name="editor4roks"><![CDATA[
-	https://marcosrego.com/web/editor4roks/joomla-updates.xml
+	https://raw.githubusercontent.com/marcosrego-web/editor4roks/master/updates/joomla-updates.xml
 	]]></server>	
 	</updateservers>
 	<config>
         <fields name="params">
             <fieldset name="options">
-				<field name="editoroption" type="list" default="1" label="Editor">
-					<option value="1">JDEFAULT</option>
+				<field name="editoroption" type="list" default="0" label="Editor" description="With 'Joomla Default' you will be able to use the default editor selected in 'Global Configuration' but this will also change the method to insert images inside Roksprocket. Choose the editor 'NicEdit' if you prefer to use the default Media Manager for selecting images.">
+					<option value="1">Joomla Default</option>
                     <option value="0">NicEdit</option>
+                </field>
+				<field name="roks4mob" type="list" default="1" label="roks4mob" description="When enabled, Roksprocket's layout will be more friendly on mobile devices.">
+					<option value="1">JENABLED</option>
+                    <option value="0">JDISABLED</option>
                 </field>
 			</fieldset>
         </fields>

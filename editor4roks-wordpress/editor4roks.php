@@ -16,7 +16,7 @@
 
 
 
-	Version:     2.1.1
+	Version:     2.2.0
 
 
 
@@ -40,7 +40,7 @@
 
 
 
-/* Copyright 2018 editor4roks by Marcos Rego (email : web@marcosrego.com)
+/* Copyright 2019 editor4roks by Marcos Rego (email : web@marcosrego.com)
 
 editor4roks is free software: you can redistribute it and/or modify
 
@@ -272,7 +272,7 @@ if (strpos($url,'roksprocket-edit') !== false) {
 
 	function add_files() {
 
-		$e4rVersion = 'v211';
+		$e4rVersion = 'v220';
 
 		
 

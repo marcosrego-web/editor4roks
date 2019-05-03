@@ -2,11 +2,11 @@
     "name" : "editor4roks",
     "slug" : "editor4roks",
     "homepage" : "https://marcosrego.com/en/web-en/editor4roks-en/",
-    "download_url" : "https://marcosrego.com/web/editor4roks/editor4roks-wordpress.zip",
+    "download_url" : "https://github.com/marcosrego-web/editor4roks/raw/master/updates/editor4roks-joomla.zip",
     
-    "version" : "2.1.0",
-    "tested" : "5.1.0",
-    "last_updated" : "2019-03-03 23:31:00",
+    "version" : "2.1.1",
+    "tested" : "5.1.1",
+    "last_updated" : "2019-05-03 23:39:00",
     "upgrade_notice" : "",
     
     "author" : "Marcos Rego",
@@ -14,6 +14,6 @@
     
     "sections" : {
         "description" : "<p>Adds the WYSIWYG HTML Editor to the custom descriptions of your <a href='http://www.rockettheme.com/wordpress/plugins/roksprocket' target='_blank'><strong>Roksprocket</strong></a> widgets. With editor4roks the descriptions will be easier to edit and the links easier to put directly on the widgets.</p><p>Tested with <em>TinyMCE</em>, <em>TinyMCE Advanced</em> and the included <em>NicEdit</em>.</p><p>This is not an official plugin of <a href='https://rockettheme.com/' target='_blank'><strong>RocketTheme</strong></a>.</p><p>editor4roks is released under the <a target='_blank' href='http://www.gnu.org/licenses/gpl-2.0.html'><strong>GNU/GPL v2 license</strong></a>.</p>",
-        "changelog" : "<p><strong>2.1.0</strong> - Added the plugin settings page with option to change between NicEdit or the default editor.</p><p><em>See the complete changelog on <a href='https://github.com/marcosrego-web/editor4roks#changelog' target='_blank'><strong>Github</strong></a>.</em></p>"
+        "changelog" : "<p><strong>2.1.1</strong> - Added the option roks4mob that makes Roksprocket's layout friendly on mobile devices.</p> <p><strong>2.1.0</strong> - Added the plugin settings page with option to change between NicEdit or the default editor.</p><p><em>See the complete changelog on <a href='https://github.com/marcosrego-web/editor4roks#changelog' target='_blank'><strong>Github</strong></a>.</em></p>"
     }
 }

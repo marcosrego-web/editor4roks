@@ -13,7 +13,7 @@ This is not an official plugin of **[RocketTheme](https://rockettheme.com/)**.
 
 ### Changelog
 
-**2.2.0** - Joomla - Added the option *roks4mob* that makes Roksprocket's layout friendly on mobile devices. Added a different Image Selector when using *Joomla's Default* editor to avoid the conflict between the default editor and the media manager inside of a Roksprocket's module. Made *NicEdit* the default selected editor.
+**2.2.0** - Added the option *roks4mob* that makes Roksprocket's layout friendly on mobile devices. Joomla - Added a different Image Selector when using *Joomla's Default* editor to avoid the conflict between the default editor and the media manager inside of a Roksprocket's module. Made *NicEdit* the default selected editor.
 
 **2.1.1** - Joomla - Extra buttons on the default editor. Corrected a bug where the panels could open behind the default editor.
 

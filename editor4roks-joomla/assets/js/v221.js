@@ -10,7 +10,7 @@ function addEditorBtn() {
 		jQuery('.input-prepend .add-on .tool.link').parent().parent().find('.peritempicker-wrapper.peritempicker-noncustom .e4r-link-btn').css('display','none');
 		
 		if(jQuery('.imgeditor4roks').length) {
-			jQuery('.e4r-img-btn,.modal.imagepicker').remove();
+			jQuery('.e4r-img-btn').remove();
 			jQuery('.item-params li:not(:first-child) .imagepicker-wrapper').append('<span class="e4r-img-btn" style="display: none; border-radius:0; float: right; margin-top: 3px;" title="Open Image Selector"><i class="icon tool picker" style="cursor: pointer;"></i></span>');
 			jQuery('.input-prepend .add-on .tool.image').parent().parent().find('.imagepicker-wrapper:not(".peritempicker-noncustom") .e4r-img-btn').css('display','block');
 			jQuery('.input-prepend .add-on .tool.image').parent().parent().find('.imagepicker-wrapper.peritempicker-noncustom .e4r-img-btn').css('display','none');
@@ -23,7 +23,7 @@ jQuery(document).ready(function($) {
 	jQuery('body.com_roksprocket').on('click','#e4r-reload',function(){
 		jQuery('#e4r-reload').fadeOut();
 	});
-	jQuery('body.com_roksprocket').on('click','.peritempicker-wrapper .dropdown-menu li:last-child a,.imagepicker-wrapper .dropdown-menu li:last-child a',function(){
+	jQuery('body.com_roksprocket').on('click','.peritempicker-wrapper .dropdown-menu li:last-child a,.imagepicker-wrapper .dropdown-menu li[data-icon="media mediamanager"] a',function(){
 		jQuery(this).parent().parent().parent().parent().parent().find('.add-on .tool.text').parent().parent().find('.e4r-btn').css('display','block');
 		if(!jQuery(this).parent().parent().parent().parent().parent().find('.add-on .tool.text').parent().parent().find('.e4r-btn').is(':visible')) {
 			addEditorBtn();
@@ -33,7 +33,7 @@ jQuery(document).ready(function($) {
 		jQuery(this).parent().parent().parent().parent().parent().find('.add-on .tool.text').parent().parent().find('.e4r-btn').css('display','none');
 		jQuery(this).parent().parent().parent().parent().parent().find('.add-on .tool.link').parent().parent().find('.e4r-link-btn').css('display','none');
 	});
-	jQuery('body.com_roksprocket').on('click','.imagepicker-wrapper .dropdown-menu li:not(":last-child") a',function(){
+	jQuery('body.com_roksprocket').on('click','.imagepicker-wrapper .dropdown-menu li:not([data-icon="media mediamanager"]) a',function(){
 		jQuery(this).parent().parent().parent().parent().parent().find('.add-on .tool.image').parent().parent().find('.e4r-img-btn').css('display','none');
 	});
 	jQuery('body.com_roksprocket').on('click','.e4r-btn',function(){
@@ -85,6 +85,7 @@ jQuery(document).ready(function($) {
 	});
 	jQuery('body.com_roksprocket').on('click','.editor4roks .btn-cancel',function(){
 		jQuery('html,body.com_roksprocket').css('overflow','auto');
+		jQuery('.e4r-listitem.active').removeClass('active');
 		jQuery('.editor4roks').fadeOut();
 		jQuery('input.e4r-editing').removeClass('e4r-editing');
 	});
@@ -92,6 +93,7 @@ jQuery(document).ready(function($) {
 		jQuery('input.e4r-editing').val(jQuery('#e4r-linkarea').val());
 		jQuery('#e4r-linkarea').val('');
 		jQuery('html,body.com_roksprocket').css('overflow','auto');
+		jQuery('.e4r-listitem.active').removeClass('active');
 		jQuery('.linkeditor4roks').fadeOut();
 		jQuery('input.e4r-editing').removeClass('e4r-editing');
 	});
@@ -99,27 +101,53 @@ jQuery(document).ready(function($) {
 		jQuery('input.e4r-editing').val(jQuery('#e4r-imgarea').val());
 		jQuery('#e4r-imgarea').val('');
 		jQuery('html,body.com_roksprocket').css('overflow','auto');
+		jQuery('.e4r-listitem.active').removeClass('active');
 		jQuery('.imgeditor4roks').fadeOut();
 		jQuery('input.e4r-editing').removeClass('e4r-editing');
 	});
 	jQuery('body.com_roksprocket').on('click','.linkeditor4roks .btn-cancel',function(){
 		jQuery('#e4r-linkarea').val('');
 		jQuery('html,body.com_roksprocket').css('overflow','auto');
+		jQuery('.e4r-listitem.active').removeClass('active');
 		jQuery('.linkeditor4roks').fadeOut();
 		jQuery('input.e4r-editing').removeClass('e4r-editing');
 	});
 	jQuery('body.com_roksprocket').on('click','.imgeditor4roks .btn-cancel',function(){
 		jQuery('#e4r-imgarea').val('');
 		jQuery('html,body.com_roksprocket').css('overflow','auto');
+		jQuery('.e4r-listitem.active').removeClass('active');
 		jQuery('.imgeditor4roks').fadeOut();
 		jQuery('input.e4r-editing').removeClass('e4r-editing');
 	});
+	
+	/*---IMAGE SELECTOR---*/
+	jQuery('#imagelist option').each(function() {
+		jQuery('.imagelist').append('<div class="e4r-listitem" title="'+jQuery(this).text()+'" url="'+jQuery(this).val()+'"><div class="e4r-listitem-img"><img src="../plugins/system/editor4roks/assets/img/joomlapreview.jpg"></div><div class="e4r-listitem-name">'+jQuery(this).text()+'</div></div>');
+	});
+	jQuery('.imagelist .e4r-listitem').one('mouseover touchstart', function() {
+		jQuery(this).find('img').attr('src','../'+jQuery(this).attr('url'));
+	});
+	jQuery('.imagelist .e4r-listitem').click(function() {
+		jQuery('input#e4r-imgarea').val(jQuery(this).attr('url'));
+		jQuery('.e4r-listitem.active').removeClass('active');
+		jQuery(this).addClass('active');
+	});
 	jQuery('input#e4r-imgarea').change(function() {
-		var imgvalue = jQuery('input#e4r-imgarea').val();
-		
-		if(imgvalue.indexOf(".jpg") >= 0 || imgvalue.indexOf(".jpeg") >= 0 || imgvalue.indexOf(".png") >= 0 || imgvalue.indexOf(".gif") >= 0 || imgvalue.indexOf(".svg") >= 0) {
-			var imgsrc = imgvalue.replace('images/','../images/');
-			jQuery('.imgeditor4roks-preview').html('<img src="'+imgsrc+'">');
-		}
+		jQuery('.e4r-listitem.active').removeClass('active');
+		jQuery('.e4r-listitem[url="'+jQuery('input#e4r-imgarea').val()+'"]').addClass('active');
+	});
+	
+	/*---LINK SELECTOR---*/
+	jQuery('#menufilelist option').each(function() {
+		jQuery('.menufilelist').append('<div class="e4r-listitem" title="'+jQuery(this).text()+'" url="'+jQuery(this).val()+'"><div class="e4r-listitem-name">'+jQuery(this).text()+'</div></div>');
+	});
+	jQuery('.menufilelist .e4r-listitem').click(function() {
+		jQuery('input#e4r-linkarea').val(jQuery(this).attr('url'));
+		jQuery('.e4r-listitem.active').removeClass('active');
+		jQuery(this).addClass('active');
+	});
+	jQuery('input#e4r-linkarea').change(function() {
+		jQuery('.e4r-listitem.active').removeClass('active');
+		jQuery('.e4r-listitem[url="'+jQuery('input#e4r-linkarea').val()+'"]').addClass('active');
 	});
 });

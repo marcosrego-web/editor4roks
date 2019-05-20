@@ -17,7 +17,7 @@ if($app->isAdmin()) {
 			$url = $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI'];
 			$editor4roksContent  = '';
 			if (strpos($url,'com_roksprocket') !== false) {
-				$e4rVersion = 'v220';
+				$e4rVersion = 'v221';
 				$rootPath = JPATH_ROOT;
 				$rootUrl = JUri::root();
 				$pluginUrl = $rootUrl.'plugins/system/editor4roks/';
@@ -44,7 +44,7 @@ if($app->isAdmin()) {
 								$image = $rootUrl.$image;
 							}
 							$imagename = basename($image);
-							$editor4roksContent = $editor4roksContent.'<option value="'.$image.'">🖼 Image - '.$imagename.'</option>';
+							$editor4roksContent = $editor4roksContent.'<option value="'.$image.'">'.$imagename.'</option>';
 						}
 					}
 				$editor4roksContent = $editor4roksContent.'</datalist>';
@@ -60,19 +60,19 @@ if($app->isAdmin()) {
 				$editor4roksContent = $editor4roksContent.'<datalist id="menufilelist">';
 					foreach ($allMenuItems as $menuItem) {
 						if (substr($menuItem->link, 0, 4 ) === "http") {
-							$editor4roksContent = $editor4roksContent.'<option value="'.$menuItem->link.'">🔗 Link - '.$menuItem->title.'</option>';
+							$editor4roksContent = $editor4roksContent.'<option value="'.$menuItem->link.'">🔗 '.$menuItem->title.'</option>';
 						} else if (strpos($menuItem->link, 'Itemid=') !== false || strpos($menuItem->link, '#') !== false) {
 							$editor4roksContent = $editor4roksContent.'<option value="'.$menuItem->link.'">📁 <span style="text-transform: capitalize">'.$menuItem->menutype.'</span> - '.$menuItem->title.' (id: '.$menuItem->id.')</option>';
 						} else if(substr($menuItem->link, -4) == '.pdf' || substr($menuItem->link, -4) == '.PDF') {
-							$editor4roksContent = $editor4roksContent.'<option value="'.$menuItem->link.'">📁 📄 Menu to File - '.$menuItem->title.'</option>';
+							$editor4roksContent = $editor4roksContent.'<option value="'.$menuItem->link.'>🔗 '.$menuItem->title.'</option>';
 						} else {
 							$editor4roksContent = $editor4roksContent.'<option value="'.$menuItem->link.'&Itemid='.$menuItem->id.'">📁 <span style="text-transform: capitalize">'.$menuItem->menutype.'</span> - '.$menuItem->title.' (id: '.$menuItem->id.')</option>';
 						}
 					}
 				$editor4roksContent = $editor4roksContent. '</datalist>';
-				$editor4roksContent = $editor4roksContent.'<div class="linkeditor4roks"><div class="e4r-container"><div class="e4r-content"><input id="e4r-linkarea" placeholder="Search here for a menu or insert the link..." list="menufilelist"></input><div class="e4r-btn-container"><a class="btn btn-primary btn-insert"><small>✔ INSERT</small></a> <a class="btn btn-cancel"><small>✖ CANCEL</small></a></div></div></div></div>';
+				$editor4roksContent = $editor4roksContent.'<div class="linkeditor4roks"><div class="e4r-container"><div class="e4r-content"><div class="menufilelist"></div><input id="e4r-linkarea" placeholder="Search for a menu or insert the link here..." list="menufilelist"></input><div class="e4r-btn-container"><a class="btn btn-primary btn-insert"><small>✔ INSERT</small></a> <a class="btn btn-cancel"><small>✖ CANCEL</small></a></div></div></div></div>';
 				if ( $editoroption != 0 || $editoroption == null) {
-					$editor4roksContent = $editor4roksContent.'<div class="imgeditor4roks"><div class="e4r-container"><div class="e4r-content"><input id="e4r-imgarea" placeholder="Search here for an image or insert the link..." list="imagelist"></input><div class="e4r-btn-container"><div class="imgeditor4roks-preview"></div><a class="btn btn-primary btn-insert"><small>✔ INSERT</small></a> <a class="btn btn-cancel"><small>✖ CANCEL</small></a></div></div></div></div>';
+					$editor4roksContent = $editor4roksContent.'<style>.modal.imagepicker {display: none;}</style><div class="imgeditor4roks"><div class="e4r-container"><div class="e4r-content"><div class="imagelist"></div><input id="e4r-imgarea" placeholder="Search for an image or insert the link here..." list="imagelist"></input><div class="e4r-btn-container"><a class="btn btn-primary btn-insert"><small>✔ INSERT</small></a> <a class="btn btn-cancel"><small>✖ CANCEL</small></a></div></div></div></div>';
 				}
 				$editor4roksContent = $editor4roksContent.'<div class="editor4roks"><div class="e4r-container"><div class="e4r-content"><div class="e4r-txt-container">'.$editor.'<div class="e4r-btn-container"><a class="btn btn-primary btn-insert"><small>✔ INSERT</small></a> <a class="btn btn-cancel"><small>✖ CANCEL</small></a></div></div></div></div>';
 			}

@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <extension type="plugin" group="system" version="3.5" method="upgrade">
     <name>editor4roks</name>
-    <version>2.2.0</version>
-    <creationDate>02 May 2019</creationDate>
+    <version>2.2.1</version>
+    <creationDate>20 May 2019</creationDate>
     <author>Marcos Rego</author>
     <authorEmail>web@marcosrego.com</authorEmail>
     <authorUrl>https://marcosrego.com</authorUrl>
@@ -21,11 +21,12 @@
 	<!-- Core files admin -->
 	<files>
 		<filename plugin="editor4roks">editor4roks.php</filename>
-		<filename>assets/css/v220.css</filename>
-		<filename>assets/css/roks4mob_v220.css</filename>
-		<filename>assets/js/v220.js</filename>
+		<filename>assets/css/v221.css</filename>
+		<filename>assets/css/roks4mob_v221.css</filename>
+		<filename>assets/js/v221.js</filename>
 		<filename>assets/js/nicEdit.js</filename>
 		<filename>assets/img/nicEditorIcons.gif</filename>
+		<filename>assets/img/joomlapreview.jpg</filename>
 		<filename>index.html</filename>
 	</files>
 	 <administration > </administration>
@@ -37,7 +38,7 @@
 	<config>
         <fields name="params">
             <fieldset name="options">
-				<field name="editoroption" type="list" default="0" label="Editor" description="With 'Joomla Default' you will be able to use the default editor selected in 'Global Configuration' but this will also change the method to insert images inside Roksprocket. Choose the editor 'NicEdit' if you prefer to use the default Media Manager for selecting images.">
+				<field name="editoroption" type="list" default="0" label="Editor" description="Use 'Joomla Default' to use the default editor selected in 'Global Configuration', this will also change the method to insert images inside Roksprocket. Choose the editor 'NicEdit' if you prefer to use the default Media Manager for selecting images.">
 					<option value="1">Joomla Default</option>
                     <option value="0">NicEdit</option>
                 </field>

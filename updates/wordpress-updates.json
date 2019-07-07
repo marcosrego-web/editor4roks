@@ -5,8 +5,8 @@
     "download_url" : "https://github.com/marcosrego-web/editor4roks/raw/master/updates/editor4roks-wordpress.zip",
     
     "version" : "2.3.0",
-    "tested" : "5.2",
-    "last_updated" : "2019-05-20 22:58:00",
+    "tested" : "5.2.2",
+    "last_updated" : "2019-07-07 17:10:00",
     "upgrade_notice" : "",
     
     "author" : "Marcos Rego",

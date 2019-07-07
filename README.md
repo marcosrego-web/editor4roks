@@ -12,6 +12,7 @@ This is not an official plugin of **[RocketTheme](https://rockettheme.com/)**.
 
 
 ### Changelog
+**2.3.0** - Added new settings options to include posts and categories links on the link selector. *Wordpress:* Updated the Update Checker to v4.7.
 
 **2.2.1** - Improved link selector. *Joomla:* Improved the Image Selector when using *Joomla's Default Editor* and corrected some small bugs. *Wordpress:* Added roks4mob for Roksprocket Items List and added roks4mob description on the settings page.
 

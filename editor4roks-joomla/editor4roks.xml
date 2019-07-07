@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <extension type="plugin" group="system" version="3.5" method="upgrade">
     <name>editor4roks</name>
-    <version>2.2.1</version>
-    <creationDate>20 May 2019</creationDate>
+    <version>2.3.0</version>
+    <creationDate>05 June 2019</creationDate>
     <author>Marcos Rego</author>
     <authorEmail>web@marcosrego.com</authorEmail>
     <authorUrl>https://marcosrego.com</authorUrl>
@@ -21,9 +21,9 @@
 	<!-- Core files admin -->
 	<files>
 		<filename plugin="editor4roks">editor4roks.php</filename>
-		<filename>assets/css/v221.css</filename>
-		<filename>assets/css/roks4mob_v221.css</filename>
-		<filename>assets/js/v221.js</filename>
+		<filename>assets/css/v230.css</filename>
+		<filename>assets/css/roks4mob_v230.css</filename>
+		<filename>assets/js/v230.js</filename>
 		<filename>assets/js/nicEdit.js</filename>
 		<filename>assets/img/nicEditorIcons.gif</filename>
 		<filename>assets/img/joomlapreview.jpg</filename>
@@ -38,9 +38,18 @@
 	<config>
         <fields name="params">
             <fieldset name="options">
-				<field name="editoroption" type="list" default="0" label="Editor" description="Use 'Joomla Default' to use the default editor selected in 'Global Configuration', this will also change the method to insert images inside Roksprocket. Choose the editor 'NicEdit' if you prefer to use the default Media Manager for selecting images.">
+				<field name="editoroption" type="list" default="0" label="Editor" description="Choose 'Joomla Default' to use the default editor selected in 'Global Configuration', this will also change the method to insert images inside Roksprocket. If you prefer to keep using the default Media Manager choose 'NicEdit' instead.">
 					<option value="1">Joomla Default</option>
                     <option value="0">NicEdit</option>
+                </field>
+				<field name="links4roks" type="list" default="1" label="links4roks" description="When enabled, the edit button will also appear next to the custom links inputs, giving access to the Link Editor to easily select an existing link.">
+					<option value="1">JENABLED</option>
+                    <option value="0">JDISABLED</option>
+                </field>
+				<field name="links" type="checkboxes" default="1" label="Links" description="Choose which type of links should appear when the editor NicEdit or links4roks is enabled.">
+					<option value="1">Menus</option>
+                    <option value="2">Articles</option>
+					<option value="3">Categories</option>
                 </field>
 				<field name="roks4mob" type="list" default="1" label="roks4mob" description="When enabled, Roksprocket's layout will be more friendly on mobile devices.">
 					<option value="1">JENABLED</option>

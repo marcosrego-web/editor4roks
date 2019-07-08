@@ -11,4 +11,4 @@ This is not an official plugin of **[RocketTheme](https://rockettheme.com/)**.
 ### [Download](https://marcosrego.com/en/web-en/editor4roks-en/)
 
 
-### [Changelog] (https://github.com/marcosrego-web/editor4roks/releases)
+### [Changelog](https://github.com/marcosrego-web/editor4roks/releases)

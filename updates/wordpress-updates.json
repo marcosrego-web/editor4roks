@@ -2,7 +2,7 @@
     "name" : "editor4roks",
     "slug" : "editor4roks",
     "homepage" : "https://marcosrego.com/en/web-en/editor4roks-en/",
-    "download_url" : "https://github.com/marcosrego-web/editor4roks/raw/master/updates/editor4roks-wordpress.zip",
+    "download_url" : "https://github.com/marcosrego-web/editor4roks/releases/download/v2.3.0/editor4roks-wordpress.zip",
     
     "version" : "2.3.0",
     "tested" : "5.2.2",

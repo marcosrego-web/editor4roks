@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <extension type="plugin" group="system" version="3.5" method="upgrade">
     <name>editor4roks</name>
-    <version>2.3.0</version>
-    <creationDate>05 June 2019</creationDate>
+    <version>2.4.0</version>
+    <creationDate>08 August 2019</creationDate>
     <author>Marcos Rego</author>
     <authorEmail>web@marcosrego.com</authorEmail>
     <authorUrl>https://marcosrego.com</authorUrl>
@@ -21,9 +21,9 @@
 	<!-- Core files admin -->
 	<files>
 		<filename plugin="editor4roks">editor4roks.php</filename>
-		<filename>assets/css/v230.css</filename>
-		<filename>assets/css/roks4mob_v230.css</filename>
-		<filename>assets/js/v230.js</filename>
+		<filename>assets/css/v240.css</filename>
+		<filename>assets/css/roks4mob_v240.css</filename>
+		<filename>assets/js/v240.js</filename>
 		<filename>assets/js/nicEdit.js</filename>
 		<filename>assets/img/nicEditorIcons.gif</filename>
 		<filename>assets/img/joomlapreview.jpg</filename>
@@ -50,6 +50,8 @@
 					<option value="1">Menus</option>
                     <option value="2">Articles</option>
 					<option value="3">Categories</option>
+					<option value="4">Documents</option>
+					<option value="5">Images</option>
                 </field>
 				<field name="roks4mob" type="list" default="1" label="roks4mob" description="When enabled, Roksprocket's layout will be more friendly on mobile devices.">
 					<option value="1">JENABLED</option>

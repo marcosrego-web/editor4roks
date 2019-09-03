@@ -2,11 +2,11 @@
     "name" : "editor4roks",
     "slug" : "editor4roks",
     "homepage" : "https://marcosrego.com/en/web-en/editor4roks-en/",
-    "download_url" : "https://github.com/marcosrego-web/editor4roks/releases/download/v2.3.0/editor4roks-wordpress.zip",
+    "download_url" : "https://github.com/marcosrego-web/editor4roks/releases/download/v2.4.0/editor4roks-wordpress.zip",
     
-    "version" : "2.3.0",
+    "version" : "2.4.0",
     "tested" : "5.2.2",
-    "last_updated" : "2019-07-07 17:10:00",
+    "last_updated" : "2019-09-03 12:39:00",
     "upgrade_notice" : "",
     
     "author" : "Marcos Rego",
@@ -14,6 +14,6 @@
     
     "sections" : {
         "description" : "<p>Adds the WYSIWYG HTML Editor to the custom descriptions of your <a href='http://www.rockettheme.com/wordpress/plugins/roksprocket' target='_blank'><strong>Roksprocket</strong></a> widgets. With editor4roks the descriptions will be easier to edit and the links easier to put directly on the widgets.</p><p>Tested with <em>TinyMCE</em>, <em>TinyMCE Advanced</em> and the included <em>NicEdit</em>.</p><p>This is not an official plugin of <a href='https://rockettheme.com/' target='_blank'><strong>RocketTheme</strong></a>.</p><p>editor4roks is released under the <a target='_blank' href='http://www.gnu.org/licenses/gpl-2.0.html'><strong>GNU/GPL v2 license</strong></a>.</p>",
-        "changelog" : "<p><strong>2.3.0</strong> - Settings options to include posts and categories links on the link selector. Updated the Update Checker to v4.7. </p> <p><em>See the complete changelog on <a href='https://github.com/marcosrego-web/editor4roks/releases' target='_blank'><strong>Github</strong></a>.</em></p>"
+        "changelog" : "<p><strong>2.4.0</strong> - Added options for 'Documents' and 'Images' to the link selector.</p> <p><em>See the complete changelog on <a href='https://github.com/marcosrego-web/editor4roks/releases' target='_blank'><strong>Github</strong></a>.</em></p>"
     }
 }
